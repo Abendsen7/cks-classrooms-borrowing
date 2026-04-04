@@ -1,6 +1,6 @@
 Dependencies for Project 'TemplateProject', Target 'Target 1': (DO NOT MODIFY !)
 CompilerVersion: 5060750::V5.06 update 6 (build 750)::.\ARMCC
-F (.\main.c)(0x69D0D947)(--c99 -c --cpu Cortex-M7.fp.dp -g -O1 --apcs=interwork --split_sections -I .\GD32H7xx_standard_peripheral\Include -I .\GD32H7xx -I .\GD32H7xx\CMSIS -I . -I .\Drivers -I .\FATFS -I .\lvgl -I .\lvgl\src -I .\lvgl\examples\porting -I .\lvgl\demos\benchmark -I .\lvgl\demos\stress --diag_suppress=68,111,188,223,546,1295-IC:\Users\99252\AppData\Local\Arm\Packs\GigaDevice\GD32H7xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="538" -DUSE_STDPERIPH_DRIVER -DGD32H7XX -DGD32H7XXI -DHXTAL_VALUE="8000000"-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+F (.\main.c)(0x69D0EAB6)(--c99 -c --cpu Cortex-M7.fp.dp -g -O1 --apcs=interwork --split_sections -I .\GD32H7xx_standard_peripheral\Include -I .\GD32H7xx -I .\GD32H7xx\CMSIS -I . -I .\Drivers -I .\FATFS -I .\lvgl -I .\lvgl\src -I .\lvgl\examples\porting -I .\lvgl\demos\benchmark -I .\lvgl\demos\stress --diag_suppress=68,111,188,223,546,1295-IC:\Users\99252\AppData\Local\Arm\Packs\GigaDevice\GD32H7xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="538" -DUSE_STDPERIPH_DRIVER -DGD32H7XX -DGD32H7XXI -DHXTAL_VALUE="8000000"-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
 I (.\Drivers\drivers.h)(0x69958465)
 I (C:\Users\99252\Desktop\keil\ARM\ARMCC\include\string.h)(0x5D9B3488)
 I (C:\Users\99252\Desktop\keil\ARM\ARMCC\include\stdio.h)(0x5D9B348A)
