@@ -1129,6 +1129,11 @@
               <FileType>1</FileType>
               <FilePath>.\lvgl\src\font\lv_font_unscii_16.c</FilePath>
             </File>
+            <File>
+              <FileName>font0.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\lvgl\src\font\font0.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -1418,16 +1423,6 @@
               <FileName>lv_textarea.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\lvgl\src\widgets\lv_textarea.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>New Group</GroupName>
-          <Files>
-            <File>
-              <FileName>test.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\lvgl\src\test.c</FilePath>
             </File>
           </Files>
         </Group>

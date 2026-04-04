@@ -140,6 +140,7 @@
 ".\objects\lv_font_simsun_16_cjk.o"
 ".\objects\lv_font_unscii_8.o"
 ".\objects\lv_font_unscii_16.o"
+".\objects\font0.o"
 ".\objects\lv_draw_sdl.o"
 ".\objects\lv_draw_sdl_arc.o"
 ".\objects\lv_draw_sdl_bg.o"
@@ -194,7 +195,6 @@
 ".\objects\lv_switch.o"
 ".\objects\lv_table.o"
 ".\objects\lv_textarea.o"
-".\objects\test.o"
 --strict --scatter ".\Objects\TemplateProject.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
