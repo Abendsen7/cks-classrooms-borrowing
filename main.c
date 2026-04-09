@@ -10,7 +10,7 @@ extern const lv_font_t font0;
 
 
 void testfont();
-lv_obj_t **weekdays(lv_obj_t *display_classrooms_title);
+void weekdays(lv_obj_t *display_classrooms_title, lv_obj_t **btn_weekdays);
 void btn_weekdays_event_cb(lv_event_t *e);
 
 int main()
@@ -50,7 +50,8 @@ int main()
 	lv_obj_set_style_text_font(label_classrooms_title, &font0, 0);
 	lv_obj_set_pos(label_classrooms_title, WIDTH/2-3*32, 0);
 
-	lv_obj_t *btn_weekdays[7] = weekdays(display_classrooms_title);
+	lv_obj_t *btn_weekdays[7]; 
+	weekdays(display_classrooms_title, btn_weekdays);
 
 	lv_obj_t *label_classrooms_query = lv_label_create(display_classrooms_title);
 	lv_label_set_text(label_classrooms_query, "----查询----");
@@ -102,22 +103,22 @@ void testfont()
 /** 
 * 创建一行七个按钮，用于切换周一至周日
 * @param display_classrooms_title 标题界面，作为按钮的父对象
-* @return 包含这七个按钮的数组
+* @param btn_weekdays 存储七个按钮的数组
 */
-lv_obj_t ** weekdays(lv_obj_t *display_classrooms_title)
+void weekdays(lv_obj_t *display_classrooms_title, lv_obj_t **btn_weekdays)
 {
-	lv_obj_t *btn_weekdays[7];
 	for (int i = 0; i < 7; i++)
 	{
 		btn_weekdays[i] = lv_btn_create(display_classrooms_title);
 		lv_obj_add_flag(btn_weekdays[i], LV_OBJ_FLAG_CHECKABLE);
-		lv_obj_set_width(btn_weekdays[i], WIDTH/7);
+		lv_obj_set_width(btn_weekdays[i], (WIDTH-50)/7-5); 		//预留50px防止按钮会溢出屏幕,两个按钮之间间隔5px
 		lv_obj_set_height(btn_weekdays[i], 32);
-		lv_obj_set_pos(btn_weekdays[i], i*WIDTH/7, 2*40);
+		lv_obj_set_pos(btn_weekdays[i], i*(WIDTH-50)/7, 2*40);
 		lv_obj_t *label_btn_weekdays = lv_label_create(btn_weekdays[i]);
 		lv_obj_center(label_btn_weekdays);
 		lv_obj_set_height(label_btn_weekdays, 32);
 		lv_obj_set_style_text_font(label_btn_weekdays, &font0, 0);
+		lv_obj_add_event_cb(btn_weekdays[i], btn_weekdays_event_cb, LV_EVENT_ALL, btn_weekdays);
 		switch (i)
 		{
 			case 0:
@@ -143,17 +144,16 @@ lv_obj_t ** weekdays(lv_obj_t *display_classrooms_title)
 				break;
 		}
 	}
-	return btn_weekdays;
 }
 
 
 /** 
 * 按下按钮后，选择这一天，并将其他按钮取消选择
-* @note 需将weekdays作为user_data传入 
+* @note 需将btn_weekdays作为user_data传入 
 */
 void btn_weekdays_event_cb(lv_event_t *e)
 {
-	lv_obj_t* weekdays[] = lv_event_get_user_data(e);
+	lv_obj_t** weekdays = lv_event_get_user_data(e);
 	lv_obj_t* btn = lv_event_get_target(e);
 	lv_event_code_t code = lv_event_get_code(e);
 	switch(code)
