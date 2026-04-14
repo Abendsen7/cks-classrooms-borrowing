@@ -7,6 +7,7 @@
 ".\objects\lv_font_bechmark_montserrat_16_compr_az.c.o"
 ".\objects\read_file_to_array.o"
 ".\objects\hang2hang.o"
+".\objects\li yiqi.o"
 ".\objects\gd32h7xx_misc.o"
 ".\objects\gd32h7xx_gpio.o"
 ".\objects\gd32h7xx_rcu.o"
