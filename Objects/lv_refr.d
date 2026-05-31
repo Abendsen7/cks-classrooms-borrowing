@@ -58,3 +58,4 @@
 .\objects\lv_refr.o: lvgl\src\core\lv_theme.h
 .\objects\lv_refr.o: lvgl\src\core\../misc/lv_gc.h
 .\objects\lv_refr.o: lvgl\src\core\../font/lv_font_fmt_txt.h
+.\objects\lv_refr.o: lvgl\src\core\../widgets/lv_label.h
